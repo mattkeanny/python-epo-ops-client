@@ -24,6 +24,7 @@ class Client(object):
     __published_data_search_path__ = "published-data/search"
     __register_path__ = "register"
     __register_search_path__ = "register/search"
+    __legal_path__ = "legal"
 
     def __init__(self, key, secret, accept_type="xml", middlewares=None):
         self.accept_type = "application/{0}".format(accept_type)
@@ -113,6 +114,26 @@ class Client(object):
         range = dict(key="Range", begin=range_begin, end=range_end)
         return self._search_request(
             {"service": self.__register_search_path__}, cql, range
+        )
+
+    def legal(
+        self,
+        reference_type,
+        input,
+    ):
+        """
+        retrieves the legal data of the patent lifecycle, including the register domain
+        of the patent.
+
+        Notes: Only the Epodoc or Docdb input format is supported
+        """
+
+        return self._service_request(
+            dict(
+                service=self.__legal_path__,
+                reference_type=reference_type,
+                input=input,
+            )
         )
 
     @property
