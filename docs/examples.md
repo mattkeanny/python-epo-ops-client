@@ -10,9 +10,6 @@ examples to help you get started and make the most out of the library.
 2. [Searching for Patents](#searching-for-patents)
 3. [Retrieving Patent Details](#retrieving-patent-details)
 4. [Downloading Patent Documents](#downloading-patent-documents)
-5. [Handling Authentication](#handling-authentication)
-7. [Advanced Search Techniques](#advanced-search-techniques)
-8. [Working with Responses](#working-with-responses)
 
 ## Getting Started
 
