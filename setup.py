@@ -28,7 +28,7 @@ setup(
     package_dir={"epo_ops": "epo_ops"},
     include_package_data=True,
     install_requires=[
-        "dogpile.cache<1.2",
+        "dogpile.cache<1.4",
         "importlib-metadata; python_version<'3.8'",
         "python-dateutil<2.9",
         "requests>=2.27,<3",
@@ -36,16 +36,16 @@ setup(
     ],
     extras_require={
         "develop": [
-            "black<24",
-            "ruff==0.0.285; python_version >= '3.7'",
+            "black<25",
+            "ruff<0.2; python_version >= '3.7'",
             "twine<5",
             "wheel<1",
         ],
         "test": [
-            "pytest<8",
+            "pytest<9",
             "pytest-cache<2",
             "pytest-cov<4.2",
-            "python-dotenv<0.20",
+            "python-dotenv<1.1",
             "responses<0.24",
         ],
     },
